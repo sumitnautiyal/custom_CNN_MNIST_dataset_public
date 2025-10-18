@@ -1,4 +1,4 @@
-# 🧠 CNNs for MNIST: Custom Architectures vs Transfer Learning
+# CNNs for MNIST: Custom Architectures vs Transfer Learning
 
 [![Dataset: MNIST](https://img.shields.io/badge/Dataset-MNIST-000000.svg)]()
 [![Model: CNN](https://img.shields.io/badge/Model-Convolutional%20Neural%20Networks-2E86DE.svg)]()
@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project implements, tunes, and compares **custom CNNs** against **fine-tuned ImageNet backbones** (e.g. VGG16, ResNet50, MobileNetV3Small) for handwritten digit recognition on **MNIST** (70,000 images, 28×28 grayscale).
 
@@ -28,7 +28,7 @@ This project implements, tunes, and compares **custom CNNs** against **fine-tune
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 mnist-cnn-vs-transfer/
@@ -55,7 +55,7 @@ mnist-cnn-vs-transfer/
 
 ---
 
-## 🧪 Dataset
+## Dataset
 
 - **MNIST** (Modified National Institute of Standards and Technology):
   - 60,000 training samples + 10,000 test samples  
@@ -68,7 +68,7 @@ mnist-cnn-vs-transfer/
 
 ---
 
-## 🧩 Methods
+## Methods
 
 ### Custom CNNs  
 - Architecture: 3–4 convolutional layers (Conv → ReLU → MaxPool) + dense head + Softmax on 10 classes  
@@ -91,7 +91,7 @@ mnist-cnn-vs-transfer/
 
 ---
 
-## 🛠️ Training & Inference
+## Training & Inference
 
 ### Train a custom CNN:
 ```bash
@@ -105,7 +105,7 @@ python src/train.py \
   --save-dir runs/custom_cnn
 ```
 
-##📊 Results (Summary)
+## Results (Summary)
 
 - Custom CNNs outperformed large backbones on MNIST in both accuracy and efficiency
 - Best model: Dropout = 0.5, Adam optimizer
@@ -113,7 +113,7 @@ python src/train.py \
 - Among transfer learning models, VGG16 performed best, but still lagged custom CNNs on this domain
 - Real-time demo "OpenCV" demonstrated fast inference and robust predictions
 
-## ⚖️ Evaluation Protocol
+## Evaluation Protocol
 
 - Use an 80 / 20 split (or 90 / 10) on the training set for validation during hyperparameter tuning
 - Final evaluation is done once on the held-out 10,000-test set
@@ -124,7 +124,7 @@ python src/train.py \
     - Inference time (ms or fps)
     - Model size / parameter count
 
-## 🧠 Key Takeaways
+## Key Takeaways
 
 - Task-specific CNNs can beat heavy pretrained models when data domain is simple (grayscale digits)
 - Dropout (around 0.5) is highly effective for generalization even with small architectures
@@ -141,4 +141,3 @@ python src/train.py \
 - ![alt text](image-6.png)
 - ![alt text](image-7.png)
 - ![alt text](image-8.png)
-- 
